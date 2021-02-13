@@ -24,6 +24,7 @@ def event_getter():
     if action_type == 'exit':
         return
 
+    cda.evaluate(action_type, current_time, current_date, cda.load())
 
 event_getter()
 
