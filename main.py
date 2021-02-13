@@ -16,7 +16,7 @@ def event_getter():
         print("'now' - gets all events within an hour of now, and says what event you're on \n"
               "'ldall' - gets all events expired and future \n"
               "'write' - modify/write events \n"
-              "'exit' - ends script \n"
+              "'exit' - ends  script \n"
               "'today' - gets all events today \n")
         event_getter()
         return
