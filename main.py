@@ -26,6 +26,7 @@ def event_getter():
 
     cda.display_event(cda.evaluate(action_type, current_time, current_date, cda.load(), current_week_day))
 
+
 data = cda.load()
 res = cda.write(data)
 a = 1

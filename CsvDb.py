@@ -13,6 +13,8 @@ def load():
     for event in range(len(all_events)):
         all_events[event] = all_events[event].split(",")
         all_events[event] = {csvDbHeader[i]:all_events[event][i] for i in range(len(csvDbHeader))}
+    for event in range(len(all_events)):
+        all_events[event]['notes'] = all_events[event]['notes'].replace('\r\n', '')
     return all_events
 
 
