@@ -22,6 +22,7 @@ def write(data):
             writer.writerow(row)
     return True
 
+
 def get_event_type(event_type, all_events):
     selected_event_list = []
     for event in all_events:
