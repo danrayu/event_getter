@@ -12,3 +12,10 @@ each program run all expired singular events are to be removed from the database
 functions:
 get_events() depending if 'now' or 'today' displays different events
 
+DB structure
+event id
+name
+date - if event type is weekly, instead of date here is written weekday
+time - time of event
+notes - weekly notes get deleted after an occurrance
+type - type of event - singular (gets deleted after occurrence) or weekly (gets repeated each weak)
