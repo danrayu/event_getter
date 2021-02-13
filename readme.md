@@ -24,8 +24,9 @@ get_events() depending if 'now' or 'today' displays different events
 
 ***
 ##Todo
-1) write `write()` function, that writes new or modifies existing events. <br/>
-2) write `get_singular()` function that returns singular events in a list. <br/>
-3) write `get_weekly()` function that returns weekly events in a list.<br/>
-4) write `evaluate()` function that depending on console command will limit events to `now`, `today` or `ldall`.<br/>
-5) write `display()` function that display evaluated events.
+1) write `write():success` function, that writes new or modifies existing events. <br/>
+2) write `get_singular():singulars_list` function that returns singular events in a list. <br/>
+3) write `get_weekly():weeklys_list` function that returns weekly events in a list.<br/>
+4) write `evaluate(console_command, current_time):events_list` function that depending on console command will limit events to `now`, `today` or
+   `ldall`. Returns list of evaluated weeklys and singulars.<br/>
+5) write `display(events_list)` function that display evaluated events.
