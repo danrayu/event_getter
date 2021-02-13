@@ -7,5 +7,5 @@ def load():
         for row in csvfile:
             all_events.append(row)
     all_events.pop(0)
-
+    return all_events
 
