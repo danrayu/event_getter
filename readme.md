@@ -4,7 +4,9 @@
 `today` - gets all events today <br/>
 `ldall` - gets all events expired and future <br/>
 `write` - allows you to modify/write events <br/>
+
 ***
+
 the program will have 2 types of events - weekly and singular
 weekly repeat each week
 singular happen once
@@ -13,7 +15,9 @@ each program run all expired singular events are to be removed from the database
 
 functions:
 get_events() depending if 'now' or 'today' displays different events
+
 ***
+
 ## DB structure
 `id`<br/>
 `name`<br/>
@@ -23,11 +27,12 @@ get_events() depending if 'now' or 'today' displays different events
 `type` - type of event - singular (gets deleted after occurrence) or weekly (gets repeated each weak)<br/>
 
 ***
+
 ##Todo
-1)D write `CsvDb.write():success` function, that writes new or modifies existing events. <br/>
+1)A write `CsvDb.write():success` function, that writes new or modifies existing events. <br/>
 2)AD write `CsvDb.load():all_events`returns all events in DB
 3)A write `CsvDb.get_singular():singulars_list` function that returns singular events in a list. <br/>
 4)D write `CsvDb.get_weekly():weeklys_list` function that returns weekly events in a list.<br/>
 5)D write `evaluate(console_command, current_time):events_list` function that depending on console command will limit events to `now`, `today` or
    `ldall`. Returns list of evaluated weeklys and singulars.<br/>
-6)A write `display(events_list)` function that display evaluated events.
+6)D write `display(events_list)` function that display evaluated events.
