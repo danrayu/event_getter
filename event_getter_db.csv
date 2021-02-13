@@ -1,0 +1,6 @@
+event id,name,date,time,notes,type
+1,School biology,saturday,13:05,test this day,weekly
+2,fitness,2021-02-15,14:00,going with kiril,singular
+3,school math,saturday,08:00,substitute teacher,weekly
+4,school chemistry,friday,11:00,,weekly
+5,watch film,2021-03-01,14:00,a note,singular
