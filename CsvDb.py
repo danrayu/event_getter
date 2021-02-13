@@ -6,7 +6,7 @@ csvDbHeader = ['id', 'name', 'date', 'time', 'type', 'notes']
 
 def load():
     all_events = []
-    with open('event_getter_db.csv', newline='') as csvfile:
+    with open('event_getter_db.csv') as csvfile:
         for row in csvfile:
             all_events.append(row)
     all_events.pop(0)
@@ -44,13 +44,22 @@ def evaluate(console_command, current_time, current_date, all_events, current_we
     evaluated_events = []
     if console_command == 'ldall':
         return all_events
-    if console_command == 'today':
+    if console_command in ('today', 'now'):
         for event in range(len(all_events)):
             if all_events[event]['date'] == str(current_date) or\
                     all_events[event]['date'] == calendar.day_name[current_week_day].lower():
                 evaluated_events.append(all_events[event])
         all_events = evaluated_events
-        return all_events
+        if console_command == 'today':
+            return all_events
+        else:
+            evaluated_events = []
+            if not all_events:
+                print("No events")
+            for event in all_events:
+                if abs(time_to_secs(str(current_time)) - time_to_secs(event['time']) <= 3600):
+                    evaluated_events.append(event)
+            return evaluated_events
 
 
 def sort_events(events_array):
