@@ -30,9 +30,10 @@ get_events() depending if 'now' or 'today' displays different events
 
 ##Todo
 1)A write `CsvDb.write():success` function, that writes new or modifies existing events. <br/>
-2)AD write `CsvDb.load():all_events`returns all events in DB
-3)A write `CsvDb.get_event_type(event_type, all_events):selected_event_list` function that returns events of a wanted type 
+2)D write `CsvDb.load():all_events`returns all events in DB
+3)D write `CsvDb.get_event_type(event_type, all_events):selected_event_list` function that returns events of a wanted type 
 in a list. <br/>
-4)D write `evaluate(console_command, current_time, weeklys_list, singulars_list):events_list` function that depending on console command will limit events to `now`, `today` or
+4)D write `evaluate(console_command, current_time, all_events):events_list` function that depending on console command will limit events to `now`, `today` or
    `ldall`. Returns list of evaluated weeklys and singulars.<br/>
 5)D write `display(events_list)` function that display evaluated events.
+6)A write `CsvDb.remove_expired(current_time)` removes 
