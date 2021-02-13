@@ -15,7 +15,7 @@ functions:
 get_events() depending if 'now' or 'today' displays different events
 ---
 ## DB structure
-`event id`<br/>
+`id`<br/>
 `name`<br/>
 `date` - if event type is weekly, instead of date here is written weekday<br/>
 `time` - time of event<br/>
