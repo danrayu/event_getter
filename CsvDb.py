@@ -2,8 +2,10 @@ import csv
 
 
 def load():
-
+    all_events = []
     with open('event_getter_db.csv', newline='') as csvfile:
         for row in csvfile:
-            print(row)
+            all_events.append(row)
+    all_events.pop(0)
+    print(all_events)
 
