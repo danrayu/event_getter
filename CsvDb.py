@@ -6,7 +6,7 @@ csvDbHeader = ['id', 'name', 'date', 'time', 'type', 'notes']
 
 def load():
     all_events = []
-    with open('event_getter_db.csv') as csvfile:
+    with open('event_getter_db.csv', newline="\n") as csvfile:
         for row in csvfile:
             all_events.append(row)
     all_events.pop(0)
@@ -18,8 +18,8 @@ def load():
 
 def write(data):
     with open('event_getter_db.csv', 'w') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(csvDbHeader)
+        writer = csv.DictWriter(csvfile, fieldnames=csvDbHeader)
+        writer.writeheader()
         for row in data:
             writer.writerow(row)
     return True
