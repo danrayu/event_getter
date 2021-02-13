@@ -23,6 +23,7 @@ def event_getter():
     if action_type == 'exit':
         return
 
+    cda.load()
 
 event_getter()
 
