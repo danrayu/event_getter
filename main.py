@@ -8,7 +8,7 @@ def event_getter():
                                             '', ['now', 'today', 'exit', 'ldall', 'write', 'help'])
 
     current_date = dt.date.today()
-    current_week_day = str(current_date.isoweekday())
+    current_week_day = current_date.weekday()
     current_time = dt.datetime.now().time()
 
 
@@ -24,6 +24,7 @@ def event_getter():
     if action_type == 'exit':
         return
 
+    cda.display_event(cda.evaluate(action_type, current_time, current_date, cda.load(), current_week_day))
 
 event_getter()
 

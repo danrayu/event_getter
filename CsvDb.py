@@ -1,5 +1,5 @@
 import csv
-import datetime as dt
+import calendar
 
 csvDbHeader = ['id', 'name', 'date', 'time', 'type', 'notes']
 
@@ -38,6 +38,19 @@ def display_event(event_list):
     for event in range(len(event_list)):
         for key_index in range(len(event_list[event])):
             print(csvDbHeader[key_index], " : ", event_list[event][csvDbHeader[key_index]])
+
+
+def evaluate(console_command, current_time, current_date, all_events, current_week_day):
+    evaluated_events = []
+    if console_command == 'ldall':
+        return all_events
+    if console_command == 'today':
+        for event in range(len(all_events)):
+            if all_events[event]['date'] == str(current_date) or\
+                    all_events[event]['date'] == calendar.day_name[current_week_day].lower():
+                evaluated_events.append(all_events[event])
+        all_events = evaluated_events
+        return all_events
 
 
 def sort_events(events_array):
