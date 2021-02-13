@@ -5,24 +5,18 @@ Class with different ways of qualifying the input.
 
 # input and check if int, return the int
 def input_check_if_int(message):
-
     while True:
-        string = input(message)
         try:
-            int(string)
-            return string
+            return int(input(message))
         except:
             print("Should be a whole number")
 
 
 # input and check if number, return the number
 def input_check_if_number(message):
-
     while True:
-        string = input(message)
         try:
-            float1 = float(string)
-            return float1
+            return float(input(message))
         except:
             print("Should be a digit")
 
